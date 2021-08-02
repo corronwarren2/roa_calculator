@@ -1,0 +1,31 @@
+class return_on_investment:
+
+    def __init__(self, cost_of_home, investment, expenses, income):
+        self.cost_of_home = cost
+        self.investment = investment
+        self.monthly_cost = expenses
+        self.income = income
+
+    def description(self):
+        print(f"The cost of the house is:{self.cost}.n\
+        The money invested to improve the home is{self.investment}.n\
+        The monthly expenses for the home is{self.expenses}.n\
+        The income from the rental each month totals{self.income}.")
+
+    def cash_flow(self, income, expenses):
+        cash_flow = int(income - expenses)
+        print(
+            f"Based on your income of: {self.income} and your expenses of: {self.expenses}, you should have a cash flow of: {cash_flow}.")
+
+    def cash_on_cash(self, cash_flow, investment):
+        annual_cash_flow = int(cash_flow * 12)
+        cash_on_cash_roi = int(annual_cash_flow / investment)
+        print(
+            f"With a cash flow of: {self.cash_flow} and your initial investment of: {self.investment} your cash on cash ROI is:{self.cash_on_cash_roi}!")
+
+
+house1 = return_on_investment(40000, 10000, 1500, 4500)
+house2 = return_on_investment(50000, 60000, 1500, 4000)
+house3 = return_on_investment(150000, 100000, 1500, 5600)
+
+my_houses = [house1, house2, house3]
